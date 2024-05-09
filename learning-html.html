@@ -11,10 +11,10 @@
             <section>
                 <h1>Introduction</h1>
                 <p>
-                    When I was an intern back in 2021, by boss once called frontend development "coloring pixels". For some reason, that didn't really resonate with me. I was learning C# for my internship, and I liked the robustness of <abbr title="Object oriented programming">OOP</abbr>. I liked creating objects and then having those objects interact with each other. It was all very structured and logical. Hearing the phrase "coloring pixels" made me think that frontend development was more of a classic art, like painting, and less of a structured way of having different elements on the page interact with each other. I thought you had to meticulously put every element exactly where it's supposed to go when creating a webpage. If you wanted to add a new element to the page, you'd have to color the pixels of the screen in the exact way that would allow the element to be made. 
-                </p> 
+                    When I was an intern back in 2021, by boss once called frontend development "coloring pixels". For some reason, that didn't really resonate with me. I was learning C# for my internship, and I liked the robustness of <abbr title="Object oriented programming">OOP</abbr>. I liked creating objects and then having those objects interact with each other. It was all very structured and logical. Hearing the phrase "coloring pixels" made me think that frontend development was more of a classic art, like painting, and less of a structured way of having different elements on the page interact with each other. I thought you had to meticulously put every element exactly where it's supposed to go when creating a webpage. If you wanted to add a new element to the page, you'd have to color the pixels of the screen in the exact way that would allow the element to be made.
+                </p>
                 <p>
-                    Now, I knew that my boss was making a joke at the time, but I didn't know how frontend development actually worked. I knew about <abbr title="HyperText Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr>, and JavaScript, but I didn't know how they worked. Whenever I was tasked with having something appear on the screen, I would just fiddle around with divs and use the already existing TypeScript functions to create the desired elements. Only in <time datetime="2024">2024</time>, when I had worked as a junior developer for 2 years and put more focus on learning and personal development, did I start learning the ins and outs of frontend development. In this journey, I figured out that frontend development is more than "coloring pixels", and that it's actually very structured. Also, with the European Accessibility Act taking effect on <time datetime="2025-06-28">June 28 2025</time>, I figured now would be a great time to start learning how I can make the web more accessible. 
+                    Now, I knew that my boss was making a joke at the time, but I didn't know how frontend development actually worked. I knew about <abbr title="HyperText Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr>, and JavaScript, but I didn't know how they worked. Whenever I was tasked with having something appear on the screen, I would just fiddle around with divs and use the already existing TypeScript functions to create the desired elements. Only in <time datetime="2024">2024</time>, when I had worked as a junior developer for 2 years and put more focus on learning and personal development, did I start learning the ins and outs of frontend development. In this journey, I figured out that frontend development is more than "coloring pixels", and that it's actually very structured. Also, with the European Accessibility Act taking effect on <time datetime="2025-06-28">June 28 2025</time>, I figured now would be a great time to start learning how I can make the web more accessible.
                 </p>
             </section>
 
@@ -83,9 +83,15 @@
             </section>
 
             <section>
-                <h1>Overdoing it</h1>
+                <h1>Underdoing it</h1>
                 <p>
-                    
+                    While you could spend time learning all the different <abbr title="HyperText Markup Language">HTML</abbr> tags and what they're used for, you could also just wrap everything in a div. You could define your own tags by giving each div a corresponding class name and then styling them all with <abbr title="Cascading Style Sheets">CSS</abbr>. If you do that, you only have to mark up content that you think needs to be marked up. You could have divs in divs in divs, and as long as you write good <abbr title="Cascading Style Sheets">CSS</abbr>, your page could look exactly the same as one where proper <abbr title="HyperText Markup Language">HTML</abbr> tags are used. So, what's the point?
+                </p>
+                <p>
+                    The point is, as I've touched upon lots of times in this article, semantics. The browser has no idea what your div is supposed to represent, and maybe in 5 years, you don't either. As I've explained, the point of <abbr title="HyperText Markup Language">HTML</abbr> is to provide meaning and structure to a webpage. If you don't like the way a certain tag looks, change the styling in <abbr title="Cascading Style Sheets">CSS</abbr>, <strong>don't</strong> forfeit meaning by changing the <abbr title="HyperText Markup Language">HTML</abbr>.
+                </p>
+                <p>
+                    I'm not saying that you should never use a <code>&lt;div&gt;</code> or a <code>&lt;span&gt;</code>, they can be quite useful for wrapping multiple pieces of content or to style a certain piece of text. I am saying that you should always consider if there is an existing tag that you could use to give your content proper meaning.
                 </p>
             </section>
 
