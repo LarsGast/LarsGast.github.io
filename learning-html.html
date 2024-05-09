@@ -5,14 +5,19 @@
     <title>LarsGast - Learning HTML</title>
 </head>
 <body>
+    <main>
+        <article>
     <h1>Learning <abbr title="HyperText Markup Language">HTML</abbr></h1>
-    <h2>Introduction</h2>
+            <section>
+                <h1>Introduction</h1>
     <p>
         When I was an intern back in 2021, by boss once called frontend development "coloring pixels". For some reason, that didn't really resonate with me. I was learning C# for my internship, and I liked the robustness of <abbr title="Object oriented programming">OOP</abbr>. I liked creating objects and then having those objects interact with each other. It was all very structured and logical. Hearing the phrase "coloring pixels" made me think that frontend development was more of a classic art, like painting, and less of a structured way of having different elements on the page interact with each other. I thought you had to meticulously put every element exactly where it's supposed to go when creating a webpage. If you wanted to add a new element to the page, you'd have to color the pixels of the screen in the exact way that would allow the element to be made. 
     </p> 
     <p>
         Now, I knew that my boss was making a joke at the time, but I didn't know how frontend development actually worked. I knew about <abbr title="HyperText Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr>, and JavaScript, but I didn't know how they worked. Whenever I was tasked with having something appear on the screen, I would just fiddle around with divs and use the already existing TypeScript functions to create the desired elements. Only in <time datetime="2024">2024</time>, when I had worked as a junior developer for 2 years and put more focus on learning and personal development, did I start learning the ins and outs of frontend development. In this journey, I figured out that frontend development is more than "coloring pixels", and that it's actually very structured. Also, with the European Accessibility Act taking effect on <time datetime="2025-06-28">June 28 2025</time>, I figured now would be a great time to start learning how I can make the web more accessible. 
     </p>
+            </section>
+            <section>
     <h2>Semantics, not styling</h2>
     <p>
         As a primarily backend developer with some experience with frontend development (TypeScript and React), my time spent actually constructing <abbr title="HyperText Markup Language">HTML</abbr> has been limited so far. Usually when I'm tasked to have something appear on the screen, I call preexisting functions or I copy and paste the <abbr title="HyperText Markup Language">HTML</abbr> from a different element. If I don't like the position of an element, I mess around with the <abbr title="HyperText Markup Language">HTML</abbr>, or maybe I wrap some elements in a div, or use a <code>&lt;br/&gt;</code> tag to separate two paragraphs. I was using <abbr title="HyperText Markup Language">HTML</abbr> as a means of styling the page.
@@ -23,10 +28,11 @@
     <p>
         <abbr title="HyperText Markup Language">HTML</abbr> doesn't just look at the document to decide which piece of content to put where and how to style each piece of content, that's mostly the job of <abbr title="Cascading Style Sheets">CSS</abbr>. <abbr title="HyperText Markup Language">HTML</abbr> looks at the document to decide what each piece of content actually means. Is it a header? A paragraph? A table? Once the browser knows what type of content something is, it can show it to the <abbr title="Cascading Style Sheets">CSS</abbr> in order to style it. It also knows how to treat the piece of content in other ways. You could use JavaScript to automatically create a table of contents of all the <code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, etc. tags. Screenreaders also know how to read each piece of content to the user. Is <em>emphasis</em> used? Define it with the <code>&lt;em&gt;</code> tag. Is something <strong>important</strong>? Use the <code>&lt;strong&gt;</code> tag. Note that these are different from <i>italics</i> and <b>bold</b> tags, which use <code>&lt;i&gt;</code> and <code>&lt;b&gt;</code> respectively. <code>&lt;i&gt;</code> and <code>&lt;b&gt;</code> are just simple styling tags, which you can use to style a piece of text however you want with <abbr title="Cascading Style Sheets">CSS</abbr>. In contrast, the <code>&lt;em&gt;</code> and <code>&lt;strong&gt;</code> tags hold actual meaning. They are used to tell the browser that the pieces of text within those tags should be conveyed to the user in a certain way. In a practical example, a screenreader will use actual emphasis in their voice when reading a piece of text wrapped in an <code>&lt;em&gt;</code> tag, meaning you can hear it when it's being read to you. A person with a visual disability may not be able to see that the text is written in italics, but they will hear the emphasis through the screen reader. This means that marking up text is more than just showing the user some text, it is conveying the desired meaning to the user. This can be done through multiple channels, like seeing and hearing.
     </p>
-    <footer>
+            </section>
+        </article>
+    </main>
         <nav>
             <a href="./index.html">Go back</a>
         </nav>
-    </footer>
 </body>
 </html>
