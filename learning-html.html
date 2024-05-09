@@ -41,7 +41,28 @@
             <section>
                 <h1>Styling, not semantics</h1>
                 <p>
-                    
+                    Of course, semantics isn't everything. As you can see from this page, lack of styling can make a piece of content boring or maybe even difficult to work with. Wrapping a header in a <code>&lt;header&gt;</code> tag doesn't make it a neat bar at the top of the page. A table in pure <abbr title="HyperText Markup Language">HTML</abbr> (which is to say, the default styling of most browsers) doesn't even have lines to divide the separate rows and columns, as you can see below.
+                </p>
+                <table>
+                    <caption>This is a table!</caption>
+                    <thead>
+                        <tr>
+                            <th>Header 1</th>
+                            <th>Header 2</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Content 1</td>
+                            <td>Content 2</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>
+                    I've made the decision to not use <abbr title="Cascading Style Sheets">CSS</abbr> in this article just yet. Mainly because I want to get used to the <abbr title="HyperText Markup Language">HTML</abbr> semantics first. I also know that it can be very tempting to use the wrong tag just to change the styling a bit. Maybe an <code>&lt;h2&gt;</code> in a certain style is a little too big, and I'd rather use an <code>&lt;h3&gt;</code> element. If that were to happen, I would be sacrificing semantic meaning over the styling of my page, which means the value of <abbr title="HyperText Markup Language">HTML</abbr> is lost.
+                </p>
+                <p>
+                    A browser should be able to read a webpage as well as possible, providing the proper semantics is essential in this process. Once the <abbr title="HyperText Markup Language">HTML</abbr> code is valid and semantically sound, I can make the page look like anything with proper <abbr title="Cascading Style Sheets">CSS</abbr>.
                 </p>
             </section>
 
