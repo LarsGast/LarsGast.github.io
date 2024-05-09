@@ -67,9 +67,18 @@
             </section>
 
             <section>
-                <h1>Divs in divs in divs</h1>
+                <h1>Overdoing it</h1>
                 <p>
-                    
+                    You may have noticed that every time I write the letters <abbr title="HyperText Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr>, the browser provides a tooltip with the expansion of the abbreviation. It does this because I have wrapped the abbreviations in an <code>&lt;abbr&gt;</code> tag. Now, you might say that the definition of an abbreviation only has to be specified once, perhaps in the title of this article. I think, however, that specifying the definition of an abbreviation every time has value, even if it seems like overkill to do it this much.
+                </p>
+                <p>
+                    In my opinion, "overdoing it" doesn't have to be a thing. In terms of <abbr title="HyperText Markup Language">HTML</abbr> code, you can never tell the receiver of the code too much in terms of semantics. You might choose to hide certain tags and attributes with <abbr title="Cascading Style Sheets">CSS</abbr>, but having the browser know what each piece of content means and represents, means that the browser can always display it in the way you want and let the browser do with it what it needs to do with it. You could hide dirty <abbr title="HyperText Markup Language">HTML</abbr> behind a layer of <abbr title="Cascading Style Sheets">CSS</abbr> and make the site appear exactly the same as a site with proper <abbr title="HyperText Markup Language">HTML</abbr>, but in doing so you forfeit meaning and semantics, which can lead to discrepancies in the future or accessibility issues.
+                </p>
+                <p>
+                    It's the same opinion I have when it comes to writing comments and documentation in code. You can figure out what many variables and functions are for by just reading the code itself, but adding comments ensures that even the most inexperienced <em>(or tired!)</em> developer can make up what's going on.
+                </p>
+                <p>
+                    In the end, the receiver of the <abbr title="HyperText Markup Language">HTML</abbr> code just needs to know what each piece of content means. The browser can guess, sometimes it can guess pretty well, but providing it with the right context ensures that it doesn't <em>have</em> to guess.
                 </p>
             </section>
 
