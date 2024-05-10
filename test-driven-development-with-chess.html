@@ -26,6 +26,28 @@
                     In this article, I will walk through the steps I took to write the logic for a chess application using <abbr title="Test Driven Development">TDD</abbr>. I will highlight the hurdles I had to overcome and show the different decisions I had to make in order to make the application as robust and complete as I could.
                 </p>
             </section>
+
+            <section>
+                <h3>Test Driven Development (<abbr title="Test Driven Development">TDD</abbr>)</h3>
+                <p>
+                    The code that you write can fail. In fact, come code that you right <em>will</em> fail, whether you accept it or not. In order to make our code fail less, we can create tests, which automatically run your code and look for bugs. If no bugs are found, great! Your code works. If the tests do find a bug, also great! Now you know where the bug comes from, and you can fix it before you push your code to production. Writing proper tests can help you ensure that your code does what it's supposed to do, while not having to plough through all the different pieces of functionality in your project yourself.
+                </p>
+                <section>
+                    <h4>Unit tests</h4>
+                    <p>
+                        So what are these tests, and what do they look like? There are different types of tests, such as end to end tests and unit tests. In this article, I will focus mainly on unit tests, as that is what I used when writing my chess application.
+                    </p>
+                    <p>
+                        A unit test is basically a function or method in your code that checks if other methods are working. It does so by calling those methods and testing whether the desired result is returned. Say you have the following method in <abbr title="C Sharp">C#</abbr>:
+                        
+                        <pre><code>public static int add(int x, int y)
+{
+    return x + y;
+}
+                        </code></pre>
+                    </p>
+                </section>
+            </section>
         </article>
     </main>
     <nav>
