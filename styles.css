@@ -1,3 +1,10 @@
+/* DEBUG MODE 
+------------------------------------*/
+*, *:before, *:after {
+    /* border: 1px solid red; */
+}
+
+
 /* GLOBAL STYLES 
 ------------------------------------*/
 
@@ -29,7 +36,30 @@ body {
     height: 100%;
 }
 
-/* Footer 
+/* HEADER 
+------------------------------------*/
+header {
+    background-color: beige;
+    position: sticky;
+    width: 100%;
+    top: 0;  
+    border-bottom: 1px solid #e8e8e8;
+}
+
+header .content-wrapper {
+    display: flex;
+}
+
+header nav {
+    margin: 20rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+/* FOOTER 
 ------------------------------------*/
 footer {
     flex-flow: column;
