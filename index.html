@@ -3,27 +3,99 @@
     <head>
         <meta charset="UTF-8"/>
         <title>LarsGast - Home</title>
+        <link rel="stylesheet" href="/styles.css">
     </head>
     <body>
         <header>
-            <h1>Just Another Title</h1>
+            <div class="content-wrapper">
+                <h1>
+                    <a href="/" class="no-style-link">Just Another Title</a>
+                </h1>
+                <nav>
+                    <ul class="no-style-list no-style-link-group">
+                        <li>
+                            <a href="/">Home</a>
+                        </li>
+                        <li>
+                            <a href="/articles">Articles</a>
+                        </li>
+                        <li>
+                            <a href="/projects">Projects</a>
+                        </li>
+                        <li>
+                            <a href="/about-me">About me</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </header>
         <main>
-            <article>
-                <h2>My Development Journey</h2>
-                <p>
-                    In this site, I keep different bits of information regarding my journey in development. This includes projects, learning opportunities, and maybe some open-ended writing. It is meant to serve as a place to store my thought process and to provide easy navigation to the different project that I've worked on to highlight my skills in software development.
-                </p>
-                <p>
-                    The site is very empty at this point in time. It also lacks styling and maybe some proper <abbr title="HyperText Markup Language">HTML</abbr> semantics. The site is very young and my knowledge of <abbr title="HyperText Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr> is still limited. Good thing the first article on this site will be about me learning just that.
-                </p>
-            </article>
-        </main>
-        <nav> 
-            Click some useful links below!
-            <ul>
-                <li><a href="./first-steps-at-learning-html.html">First Steps at Learning <abbr title="HyperText Markup Language">HTML</abbr></a></li>
-            </ul>
-        </nav>
+            <div class="content-wrapper">
+                <article>
+                    <h2>Home</h2>
+                    <p>
+                        Hello, and welcome to my website!
+                    </p>
+                    <p>
+                        My name is Lars and in this site, I keep different bits of information regarding my journey in development. This includes projects, learning opportunities, and maybe even some open-ended writing. It is meant to serve as a place to store my thought process and to provide easy navigation to the different projects that I've worked on to highlight my skills in software development.
+                    </p>
+                    <p>
+                        Use the navigation located in the header of each page to navigate throughout the website. Below is a short description of each main page and what they contain.
+                    </p>
+                    <ul class="no-style-list no-style-link-group" id="nav-summary">
+                        <li>
+                            <h3>Home</h3>
+                            <p>
+                                That's where we are right now! It's the landing page of this website and can be used as a hub to move to different parts of the site.
+                            </p>
+                        </li>
+                        <li>
+                            <a href="/articles/">
+                                <h3>Articles</h3>
+                                <p>
+                                    A place where I write about whatever it is that's on my mind. This can be projects, learning opportunities, or something else entirely.
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/projects">
+                                <h3>Projects</h3>
+                                <p>
+                                    Here, I document what projects I have worked on or am currently working on in a <abbr title="curriculum vitae">cv</abbr> sort of style. Some projects might also have an article that explains my thought process and certain decisions that I have made.
+                                </p>
+                            </a>
+                            
+                        </li>
+                        <li>
+                            <a href="/about-me">
+                                <h3>About me</h3>
+                                <p>
+                                    If you want to know more about me, this is the place to be. On this page, I'll tell you who I am and how I got to where I am right now.
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                    <p>
+                        The site is very empty at this point in time. It also lacks styling and maybe some proper <abbr title="HyperText Markup Language">HTML</abbr> semantics. The site is very young and my knowledge of <abbr title="HyperText Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr> is still limited. Good thing the first article on this site will be about me learning just that.
+                    </p>
+                </article>
+            </div>
+         </main>
+        <footer>
+            <div class="content-wrapper">
+                <ul class="no-style-list no-style-link-group">
+                    <li>
+                        <a href="https://github.com/LarsGast" target="_blank">
+                            <img src="/images/Github.svg" alt="My Github page">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://linkedin.com/in/lars-hoekstra-9905a525b" target="_blank">
+                            <img src="/images/LinkedIN.svg" alt="My LinkedIn page">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
     </body>
 </html>

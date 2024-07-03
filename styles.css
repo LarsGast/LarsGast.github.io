@@ -1,0 +1,225 @@
+/* DEBUG MODE 
+------------------------------------*/
+/* 
+Uncomment the following line to give every element a red outline.
+Good for debugging.
+*/
+*, *:before, *:after {
+    /* border: 1px solid red; */
+}
+
+/* GLOBAL STYLES 
+------------------------------------*/
+/* 
+Set the rem size to 1px.
+16px * 6.25% = 1px.
+This is so we can use rem size to use in sizing so we can accommodate for all browser standard font sizes.
+*/
+html {
+    box-sizing: border-box; 
+    font-size: 6.25%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* Make sure we use the entire viewport. */
+html, body {
+    height: 100%;
+}
+
+/* Set the font-size back to 16rem (= browser pixel size) so the content is normal sized again for all screens */
+body {
+    background: #f6f6f6; 
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16rem;
+    line-height: 1.4;
+}
+
+/* 
+The content should not be pressed against the size of the viewport.
+Padding makes sure this is also not the case for screens smaller than 1000rem.
+*/
+.content-wrapper {
+    margin: 0 auto;
+    padding: 0 20rem;
+    max-width: calc(1000rem + (20rem * 2));
+    height: 100%;
+}
+
+/* HEADER 
+------------------------------------*/
+/* The header should stick to the top and scroll with and span the viewport. */
+header {
+    background-color: beige;
+    position: sticky;
+    height: 60rem;
+    top: 0;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+/* Flex so we can move the navigation to the right. */
+header .content-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+header a {
+    font-weight: bold;
+}
+
+/* On hover color to signify it's clickable */
+header a:hover {
+    color: #696969;
+}
+
+/* Flex shrink is 0 so the title is always one line */
+header h1 {
+    margin: 0;
+    flex-shrink: 0;
+}
+
+/* Navigation takes up all the space that the title doesn't */
+header nav {
+    flex: 1;
+}
+
+/* Here we specify that the navigation items should align to the right side of the header */
+nav ul {
+    display: flex;
+    justify-content: right;
+    height: 100%;
+}
+
+/*
+Space between nav links.
+First and last (left and right) items should not have the extra margin on the outside since .content-wrapper already includes padding
+*/
+nav li {
+    margin: 0 10rem;
+}
+nav li:first-child {
+    margin-left: 0;
+}
+nav li:last-child {
+    margin-right: 0;
+}
+
+/* On smaller screens, put the navigation of the site below the title. */
+@media screen and (max-width: 648px) {
+    header {
+        height: 80rem;
+    }
+
+    /* Switch from rows to columns */
+    header .content-wrapper{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    /* Navigation tag should no longer take in all available space. */
+    header nav {
+        flex: 0;
+    }
+}
+
+/* MAIN 
+------------------------------------*/
+/* 50rem for the footer + 10rem breathing room */
+main {
+    margin-bottom: 60rem;
+}
+
+/* FOOTER 
+------------------------------------*/
+/* The footer should stick to the bottom and scroll with and span the viewport. */
+footer {
+    flex-flow: column;
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    height: 50rem;
+    bottom: 0;
+}
+
+/* Makes the social media icons appear on the right side. */
+footer ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+}
+
+footer li {
+    margin: 0 5rem;
+    width: 32rem;
+}
+
+/* Make the image a block element so we can make it the same size of its parent.  */
+footer img {
+    display: block;
+    width: 100%;
+}
+
+/* GENERAL CLASSES
+------------------------------------*/
+/* For getting rid of ul/li tag styling */
+.no-style-list {
+    margin: 0;
+    padding: 0;
+}
+.no-style-list li {
+    list-style: none;
+}
+
+/* For getting rid of anchor tag styling */
+.no-style-link {
+    display: block;
+    height: 100%;
+    text-decoration: none;
+    color: black;
+}
+.no-style-link-group a {
+    display: block;
+    height: 100%;
+    text-decoration: none;
+    color: black;
+}
+
+/* SPECIFIC ELEMENTS
+------------------------------------*/
+/* #nav-summary = pretty navigation blocks in the middle of the main content of the home page. */
+#nav-summary {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20rem 10rem;
+    padding-bottom: 5rem; /* To give space to the shadow */
+}
+
+/* 
+Width and height measured so 4 of these boxes fit on a full size screen. 
+These are dependent on (and should be adjusted to) the content however, not sure how I feel about that.
+*/
+#nav-summary li {
+    width: 240rem;
+    height: 240rem;
+    border: 1rem solid black;
+    border-radius: 10rem;
+    box-shadow: 5rem 5rem;
+    transition: transform 0.2s;
+}
+
+#nav-summary h3 {
+    margin: 10rem;
+}
+
+#nav-summary p {
+    margin: 0 10rem;
+}
+
+/* Make the boxes pop up on hover */
+#nav-summary li:hover {
+    transform: translateY(-10rem)
+}
