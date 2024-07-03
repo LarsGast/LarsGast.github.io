@@ -25,14 +25,14 @@ body {
     background: #f6f6f6; 
     margin: 0;
     font-family: 'Open Sans', sans-serif;
-    font-size: 15rem; /* set default to 15px */
+    font-size: 16rem;
     line-height: 1.4;
 }
 
 .content-wrapper {
     margin: 0 auto;
     padding: 0 20rem;
-    max-width: 1040rem;
+    max-width: calc(1000rem + (20rem * 2));
     height: 100%;
 }
 
@@ -41,16 +41,26 @@ body {
 header {
     background-color: beige;
     position: sticky;
-    width: 100%;
-    top: 0;  
+    height: 60rem;
+    top: 0;
     border-bottom: 1px solid #e8e8e8;
 }
 
 header .content-wrapper {
     display: flex;
+    align-items: center;
+}
+
+header a {
+    display: block;
+    height: 100%;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
 }
 
 header h1 {
+    margin: 0;
     flex-shrink: 0;
 }
 
@@ -61,7 +71,6 @@ header nav {
 nav ul {
     display: flex;
     justify-content: right;
-    align-items: center;
     padding: 0;
     margin: 0;
     height: 100%;
@@ -73,11 +82,6 @@ nav li {
 
 nav li:last-child {
     margin-right: 0;
-}
-
-nav a {
-    text-decoration: none;
-    color: black;
 }
 
 /* FOOTER 
