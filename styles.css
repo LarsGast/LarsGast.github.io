@@ -82,6 +82,32 @@ nav li:last-child {
     margin-right: 0;
 }
 
+/* MAIN 
+------------------------------------*/
+#nav-summary {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10rem;
+    padding-bottom: 5rem; /* To deal with the shadow */
+}
+
+#nav-summary li {
+    width: calc(33.33% - 10rem);
+    height: 180rem;
+    border: 1px solid black;
+    border-radius: 10rem;
+    box-shadow: 5rem 5rem;
+    overflow: hidden;
+}
+
+#nav-summary li p {
+    margin: 0 10rem;
+}
+
+#nav-summary h3 {
+    margin: 10rem;
+}
+
 /* FOOTER 
 ------------------------------------*/
 footer {
