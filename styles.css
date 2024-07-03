@@ -92,8 +92,8 @@ nav li:last-child {
 }
 
 #nav-summary li {
-    width: calc(33.33% - 10rem);
-    height: 180rem;
+    width: 240rem;
+    height: 240rem;
     border: 1px solid black;
     border-radius: 10rem;
     box-shadow: 5rem 5rem;
