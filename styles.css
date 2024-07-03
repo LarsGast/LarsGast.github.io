@@ -140,12 +140,12 @@ footer img {
 
 /* General 
 ------------------------------------*/
-ul.none-list-style {
+/* For getting rid of ul/li tag styling */
+.no-style-list {
     margin: 0;
     padding: 0;
 }
-
-.none-list-style li {
+.no-style-list li {
     list-style: none;
 }
 
