@@ -1,13 +1,20 @@
 /* DEBUG MODE 
 ------------------------------------*/
+/* 
+Uncomment the following line to give every element a red outline.
+Good for debugging.
+*/
 *, *:before, *:after {
     /* border: 1px solid red; */
 }
 
-
 /* GLOBAL STYLES 
 ------------------------------------*/
-
+/* 
+Set the rem size to 1px.
+16px * 6.25% = 1px.
+This is so we can use rem size to use in sizing so we can accommodate for all browser standard font sizes.
+*/
 html {
     box-sizing: border-box; 
     font-size: 6.25%; /* set default to 1px */
@@ -17,10 +24,12 @@ html {
     box-sizing: inherit;
 }
 
+/* Make sure we use the entire viewport. */
 html, body {
     height: 100%;
 }
 
+/* Set the font-size back to 16rem (= browser pixel size) so the content is normal sized again for all screens */
 body {
     background: #f6f6f6; 
     margin: 0;
@@ -29,6 +38,10 @@ body {
     line-height: 1.4;
 }
 
+/* 
+The content should now be pressed against the size of the viewport.
+Padding makes sure this is also not the case for screens smaller than 1000rem.
+*/
 .content-wrapper {
     margin: 0 auto;
     padding: 0 20rem;
@@ -38,6 +51,7 @@ body {
 
 /* HEADER 
 ------------------------------------*/
+/* The header should stick to the top and scroll with and span the viewport. */
 header {
     background-color: beige;
     position: sticky;
@@ -46,6 +60,7 @@ header {
     border-bottom: 1px solid #e8e8e8;
 }
 
+/* Flex so we can move the navigation to the right. */
 header .content-wrapper {
     display: flex;
     align-items: center;
@@ -55,48 +70,53 @@ header a {
     font-weight: bold;
 }
 
+/* Flex shrink is 0 so the title is always one line */
 header h1 {
     margin: 0;
     flex-shrink: 0;
 }
 
+/* Navigation takes up all the space that the title doesn't */
 header nav {
     width: 100%;
 }
 
+/* Here we specify that the navigation items should align to the right side of the header */
 nav ul {
     display: flex;
     justify-content: right;
     height: 100%;
 }
 
+/* Space between nav links, but only to the right since .content-wrapper already includes padding */
 nav li {
-    margin: 0 10rem;
-}
-
-nav li:last-child {
-    margin-right: 0;
+    margin-left: 20rem;
 }
 
 /* MAIN 
 ------------------------------------*/
+/* #nav-summary = pretty navigation blocks in the middle of the main content. */
 #nav-summary {
     display: flex;
     flex-wrap: wrap;
     gap: 20rem 10rem;
-    padding-bottom: 5rem; /* To deal with the shadow */
+    padding-bottom: 5rem; /* To give space to the shadow */
 }
 
+/* 
+Width and height measured so 4 of these boxes fit on a full size screen. 
+These are dependent on (and should be adjusted to) the content however, not sure how I feel about that.
+*/
 #nav-summary li {
     width: 240rem;
     height: 240rem;
-    border: 1px solid black;
+    border: 1rem solid black;
     border-radius: 10rem;
     box-shadow: 5rem 5rem;
-    overflow: hidden;
     transition: transform 0.2s;
 }
 
+/* Make the boxes pop up on hover */
 #nav-summary li:hover {
     transform: translateY(-10rem)
 }
@@ -111,6 +131,7 @@ nav li:last-child {
 
 /* FOOTER 
 ------------------------------------*/
+/* The header should stick to the bottom and scroll with and span the viewport. */
 footer {
     flex-flow: column;
     background-color: black;
@@ -120,6 +141,7 @@ footer {
     bottom: 0;
 }
 
+/* Makes the social media icons appear on the right side. */
 footer ul {
     display: flex;
     justify-content: flex-end;
@@ -129,10 +151,10 @@ footer ul {
 
 footer li {
     margin: 0 5rem;
-    height: 32rem;
     width: 32rem;
 }
 
+/* Make the image a block element so we can make it the same size of its parent.  */
 footer img {
     display: block;
     width: 100%;
