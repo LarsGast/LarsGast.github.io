@@ -52,10 +52,6 @@ header .content-wrapper {
 }
 
 header a {
-    display: block;
-    height: 100%;
-    text-decoration: none;
-    color: black;
     font-weight: bold;
 }
 
@@ -87,7 +83,7 @@ nav li:last-child {
 #nav-summary {
     display: flex;
     flex-wrap: wrap;
-    gap: 10rem;
+    gap: 20rem 10rem;
     padding-bottom: 5rem; /* To deal with the shadow */
 }
 
@@ -98,6 +94,11 @@ nav li:last-child {
     border-radius: 10rem;
     box-shadow: 5rem 5rem;
     overflow: hidden;
+    transition: transform 0.2s;
+}
+
+#nav-summary li:hover {
+    transform: translateY(-10rem)
 }
 
 #nav-summary li p {
@@ -137,13 +138,8 @@ footer img {
     width: 100%;
 }
 
-footer a {
-    display: block;
-}
-
 /* General 
 ------------------------------------*/
-
 ul.none-list-style {
     margin: 0;
     padding: 0;
@@ -151,4 +147,18 @@ ul.none-list-style {
 
 .none-list-style li {
     list-style: none;
+}
+
+/* For getting rid of anchor tag styling */
+.no-style-link {
+    display: block;
+    height: 100%;
+    text-decoration: none;
+    color: black;
+}
+.no-style-link-group a {
+    display: block;
+    height: 100%;
+    text-decoration: none;
+    color: black;
 }
