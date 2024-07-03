@@ -70,6 +70,11 @@ header a {
     font-weight: bold;
 }
 
+/* On hover color to signify it's clickable */
+header a:hover {
+    color: #696969;
+}
+
 /* Flex shrink is 0 so the title is always one line */
 header h1 {
     margin: 0;
