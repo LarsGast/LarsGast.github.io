@@ -78,7 +78,7 @@ header h1 {
 
 /* Navigation takes up all the space that the title doesn't */
 header nav {
-    width: 100%;
+    flex: 1;
 }
 
 /* Here we specify that the navigation items should align to the right side of the header */
@@ -88,9 +88,36 @@ nav ul {
     height: 100%;
 }
 
-/* Space between nav links, but only to the right since .content-wrapper already includes padding */
+/*
+Space between nav links.
+First and last (left and right) items should not have the extra margin on the outside since .content-wrapper already includes padding
+*/
 nav li {
-    margin-left: 20rem;
+    margin: 0 10rem;
+}
+nav li:first-child {
+    margin-left: 0;
+}
+nav li:last-child {
+    margin-right: 0;
+}
+
+/* On smaller screens, put the navigation of the site below the title. */
+@media screen and (max-width: 648px) {
+    header {
+        height: 80rem;
+    }
+
+    /* Switch from rows to columns */
+    header .content-wrapper{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    /* Navigation tag should no longer take in all available space. */
+    header nav {
+        flex: 0;
+    }
 }
 
 /* MAIN 
