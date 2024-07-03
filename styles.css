@@ -95,6 +95,11 @@ nav li {
 
 /* MAIN 
 ------------------------------------*/
+/* 50rem for the footer + 10rem breathing room */
+main {
+    margin-bottom: 60rem;
+}
+
 /* #nav-summary = pretty navigation blocks in the middle of the main content. */
 #nav-summary {
     display: flex;
