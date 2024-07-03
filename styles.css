@@ -17,7 +17,7 @@ This is so we can use rem size to use in sizing so we can accommodate for all br
 */
 html {
     box-sizing: border-box; 
-    font-size: 6.25%; /* set default to 1px */
+    font-size: 6.25%;
 }
 
 *, *:before, *:after {
@@ -39,7 +39,7 @@ body {
 }
 
 /* 
-The content should now be pressed against the size of the viewport.
+The content should not be pressed against the size of the viewport.
 Padding makes sure this is also not the case for screens smaller than 1000rem.
 */
 .content-wrapper {
@@ -127,43 +127,9 @@ main {
     margin-bottom: 60rem;
 }
 
-/* #nav-summary = pretty navigation blocks in the middle of the main content. */
-#nav-summary {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20rem 10rem;
-    padding-bottom: 5rem; /* To give space to the shadow */
-}
-
-/* 
-Width and height measured so 4 of these boxes fit on a full size screen. 
-These are dependent on (and should be adjusted to) the content however, not sure how I feel about that.
-*/
-#nav-summary li {
-    width: 240rem;
-    height: 240rem;
-    border: 1rem solid black;
-    border-radius: 10rem;
-    box-shadow: 5rem 5rem;
-    transition: transform 0.2s;
-}
-
-/* Make the boxes pop up on hover */
-#nav-summary li:hover {
-    transform: translateY(-10rem)
-}
-
-#nav-summary li p {
-    margin: 0 10rem;
-}
-
-#nav-summary h3 {
-    margin: 10rem;
-}
-
 /* FOOTER 
 ------------------------------------*/
-/* The header should stick to the bottom and scroll with and span the viewport. */
+/* The footer should stick to the bottom and scroll with and span the viewport. */
 footer {
     flex-flow: column;
     background-color: black;
@@ -192,7 +158,7 @@ footer img {
     width: 100%;
 }
 
-/* General 
+/* GENERAL CLASSES
 ------------------------------------*/
 /* For getting rid of ul/li tag styling */
 .no-style-list {
@@ -215,4 +181,40 @@ footer img {
     height: 100%;
     text-decoration: none;
     color: black;
+}
+
+/* SPECIFIC ELEMENTS
+------------------------------------*/
+/* #nav-summary = pretty navigation blocks in the middle of the main content of the home page. */
+#nav-summary {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20rem 10rem;
+    padding-bottom: 5rem; /* To give space to the shadow */
+}
+
+/* 
+Width and height measured so 4 of these boxes fit on a full size screen. 
+These are dependent on (and should be adjusted to) the content however, not sure how I feel about that.
+*/
+#nav-summary li {
+    width: 240rem;
+    height: 240rem;
+    border: 1rem solid black;
+    border-radius: 10rem;
+    box-shadow: 5rem 5rem;
+    transition: transform 0.2s;
+}
+
+#nav-summary h3 {
+    margin: 10rem;
+}
+
+#nav-summary p {
+    margin: 0 10rem;
+}
+
+/* Make the boxes pop up on hover */
+#nav-summary li:hover {
+    transform: translateY(-10rem)
 }
