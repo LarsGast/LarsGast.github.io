@@ -5,7 +5,7 @@ Uncomment the following line to give every element a red outline.
 Good for debugging.
 */
 *, *:before, *:after {
-    /* border: 1px solid red; */
+    /* border: 1px solid red !important; */
 }
 
 /* GLOBAL STYLES 
@@ -217,6 +217,17 @@ footer img {
 #home .block-link-list li{
     width: 240rem;
     height: 240rem;
+}
+
+.article-link-header {
+    display: flex;
+    align-items: center;
+}
+
+.article-link-header time {
+    flex: 1;
+    text-align: right;
+    margin: 10rem;
 }
 
 /* SPECIFIC ELEMENTS
