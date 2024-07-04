@@ -203,15 +203,20 @@ footer img {
     box-shadow: 5rem 5rem;
     transition: transform 0.2s;
 }
-.block-link-list h3 {
-    margin: 10rem;
-}
-.block-link-list p {
-    margin: 10rem;
-}
 /* Make the boxes pop up on hover */
 .block-link-list li:hover {
     transform: translateY(-10rem)
+}
+/* Add some padding to the content of the block-link so it's not aligned with the border. */
+.block-link-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+    padding: 10rem;
+}
+/* Since we already dealt with the padding and flex-gap, everything within the container can have no margin. */
+.block-link-container * {
+    margin: 0;
 }
 /* Width and height measured so 4 of these boxes fit on a full size screen on the home page. */
 #home .block-link-list li{
@@ -219,16 +224,13 @@ footer img {
     height: 240rem;
 }
 
+/* Header class for article links within a block-link to add the publishing date. */
 .article-link-header {
     display: flex;
     align-items: center;
 }
-
+/* The date should be right aligned and move with the width of the block-link */
 .article-link-header time {
     flex: 1;
     text-align: right;
-    margin: 10rem;
 }
-
-/* SPECIFIC ELEMENTS
-------------------------------------*/
