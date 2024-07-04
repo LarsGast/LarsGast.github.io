@@ -188,38 +188,36 @@ footer img {
     color: black;
 }
 
-/* SPECIFIC ELEMENTS
-------------------------------------*/
-/* #nav-summary = pretty navigation blocks in the middle of the main content of the home page. */
-#nav-summary {
+/* #block-link-list = pretty navigation blocks in the middle of the main content. */
+.block-link-list {
     display: flex;
     flex-wrap: wrap;
     gap: 20rem 10rem;
     padding-bottom: 5rem; /* To give space to the shadow */
 }
-
-/* 
-Width and height measured so 4 of these boxes fit on a full size screen. 
-These are dependent on (and should be adjusted to) the content however, not sure how I feel about that.
-*/
-#nav-summary li {
-    width: 240rem;
-    height: 240rem;
+/* These are dependent on (and should be adjusted to) the content however, not sure how I feel about that.*/
+.block-link-list li {
+    width: 100%;
     border: 1rem solid black;
     border-radius: 10rem;
     box-shadow: 5rem 5rem;
     transition: transform 0.2s;
 }
-
-#nav-summary h3 {
+.block-link-list h3 {
     margin: 10rem;
 }
-
-#nav-summary p {
-    margin: 0 10rem;
+.block-link-list p {
+    margin: 10rem;
 }
-
 /* Make the boxes pop up on hover */
-#nav-summary li:hover {
+.block-link-list li:hover {
     transform: translateY(-10rem)
 }
+/* Width and height measured so 4 of these boxes fit on a full size screen on the home page. */
+#home .block-link-list li{
+    width: 240rem;
+    height: 240rem;
+}
+
+/* SPECIFIC ELEMENTS
+------------------------------------*/
