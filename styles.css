@@ -224,13 +224,19 @@ footer img {
     height: 240rem;
 }
 
-/* Header class for article links within a block-link to add the publishing date. */
+/* Header class for article links within a block-link to add the publishing and last revised dates. */
 .article-link-header {
     display: flex;
     align-items: center;
 }
-/* The date should be right aligned and move with the width of the block-link */
-.article-link-header time {
+/* The dates should be right aligned and move with the width of the block-link */
+.article-link-header aside {
+    display: flex;
     flex: 1;
-    text-align: right;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 13rem;
+}
+.article-link-header aside span {
+    font-weight: bold;
 }
