@@ -240,3 +240,16 @@ footer img {
 .article-link-header aside span {
     font-weight: bold;
 }
+
+/* On smaller screens, put the published and last revised dates title of the article. */
+@media screen and (max-width: 470px) {
+    .article-link-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5rem;
+    }
+
+    .article-link-header aside {
+        align-items: flex-start;
+    }
+}
