@@ -90,21 +90,7 @@ header nav {
 nav ul {
     display: flex;
     justify-content: right;
-    height: 100%;
-}
-
-/*
-Space between nav links.
-First and last (left and right) items should not have the extra margin on the outside since .content-wrapper already includes padding
-*/
-nav li {
-    margin: 0 10rem;
-}
-nav li:first-child {
-    margin-left: 0;
-}
-nav li:last-child {
-    margin-right: 0;
+    gap: 20rem;
 }
 
 /* On smaller screens, put the navigation of the site below the title. */
@@ -117,11 +103,6 @@ nav li:last-child {
     header .content-wrapper{
         flex-direction: column;
         justify-content: center;
-    }
-
-    /* Navigation tag should no longer take in all available space. */
-    header nav {
-        flex: 0;
     }
 }
 
