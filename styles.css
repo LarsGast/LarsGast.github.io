@@ -1,0 +1,231 @@
+/* DEBUG MODE 
+------------------------------------*/
+/* 
+Uncomment the following line to give every element a red outline.
+Good for debugging.
+*/
+*, *:before, *:after {
+    /* border: 1px solid red !important; */
+}
+
+/* GLOBAL STYLES 
+------------------------------------*/
+/* 
+Set the rem size to 1px.
+16px * 6.25% = 1px.
+This is so we can use rem size to use in sizing so we can accommodate for all browser standard font sizes.
+*/
+html {
+    box-sizing: border-box; 
+    font-size: 6.25%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* Set the font-size back to 16rem (= browser pixel size) so the content is normal sized again for all screens */
+body {
+    background: #f6f6f6; 
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16rem;
+    line-height: 1.4;
+}
+
+/* 
+The content should not be pressed against the size of the viewport.
+Padding makes sure this is also not the case for screens smaller than 1000rem.
+*/
+.content-wrapper {
+    margin: 0 auto;
+    padding: 0 20rem;
+    max-width: calc(1000rem + (20rem * 2));
+    height: 100%;
+}
+
+/* HEADER 
+------------------------------------*/
+/* The header should stick to the top and scroll with and span the viewport. */
+header {
+    background-color: beige;
+    position: sticky;
+    height: 60rem;
+    top: 0;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+/* Flex so we can move the navigation to the right. */
+header .content-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+header a {
+    font-weight: bold;
+}
+
+/* On hover color to signify it's clickable */
+header a:hover {
+    color: #696969;
+}
+
+/* Flex shrink is 0 so the title is always one line */
+header h1 {
+    margin: 0;
+    flex-shrink: 0;
+}
+
+/* Navigation takes up all the space that the title doesn't */
+header nav {
+    flex: 1;
+}
+
+/* Here we specify that the navigation items should align to the right side of the header */
+nav ul {
+    display: flex;
+    justify-content: right;
+    gap: 20rem;
+}
+
+/* On smaller screens, put the navigation of the site below the title. */
+@media screen and (max-width: 648px) {
+    header {
+        height: 80rem;
+    }
+
+    /* Switch from rows to columns */
+    header .content-wrapper{
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+/* MAIN 
+------------------------------------*/
+/* 50rem for the footer + 10rem breathing room */
+main {
+    margin-bottom: 60rem;
+}
+
+/* FOOTER 
+------------------------------------*/
+/* The footer should stick to the bottom and scroll with and span the viewport. */
+footer {
+    flex-flow: column;
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    height: 50rem;
+    bottom: 0;
+}
+
+/* Makes the social media icons appear on the right side. */
+footer ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+}
+
+footer li {
+    margin: 0 5rem;
+    width: 32rem;
+}
+
+/* Make the image a block element so we can make it the same size of its parent.  */
+footer img {
+    display: block;
+    width: 100%;
+}
+
+/* GENERAL CLASSES
+------------------------------------*/
+/* For getting rid of ul/li tag styling */
+.no-style-list {
+    margin: 0;
+    padding: 0;
+}
+.no-style-list li {
+    list-style: none;
+}
+
+/* For getting rid of anchor tag styling */
+.no-style-link {
+    display: block;
+    height: 100%;
+    text-decoration: none;
+    color: black;
+}
+.no-style-link-group a {
+    display: block;
+    height: 100%;
+    text-decoration: none;
+    color: black;
+}
+
+/* #block-link-list = pretty navigation blocks in the middle of the main content. */
+.block-link-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20rem 10rem;
+    padding-bottom: 5rem; /* To give space to the shadow */
+}
+/* These are dependent on (and should be adjusted to) the content however, not sure how I feel about that.*/
+.block-link-list li {
+    width: 100%;
+    border: 1rem solid black;
+    border-radius: 10rem;
+    box-shadow: 5rem 5rem;
+    transition: transform 0.2s;
+}
+/* Make the boxes pop up on hover */
+.block-link-list li:hover {
+    transform: translateY(-10rem)
+}
+/* Add some padding to the content of the block-link so it's not aligned with the border. */
+.block-link-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+    padding: 10rem;
+}
+/* Since we already dealt with the padding and flex-gap, everything within the container can have no margin. */
+.block-link-container * {
+    margin: 0;
+}
+/* Width and height measured so 4 of these boxes fit on a full size screen on the home page. */
+#home .block-link-list li{
+    width: 240rem;
+    height: 240rem;
+}
+
+/* Header class for article links within a block-link to add the publishing and last revised dates. */
+.article-link-header {
+    display: flex;
+    align-items: center;
+}
+/* The dates should be right aligned and move with the width of the block-link */
+.article-link-header aside {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 13rem;
+}
+.article-link-header aside span {
+    font-weight: bold;
+}
+
+/* On smaller screens, put the published and last revised dates title of the article. */
+@media screen and (max-width: 470px) {
+    .article-link-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5rem;
+    }
+
+    .article-link-header aside {
+        align-items: flex-start;
+    }
+}
