@@ -24,11 +24,6 @@ html {
     box-sizing: inherit;
 }
 
-/* Make sure we use the entire viewport. */
-html, body {
-    height: 100%;
-}
-
 /* Set the font-size back to 16rem (= browser pixel size) so the content is normal sized again for all screens */
 body {
     background: #f6f6f6; 
