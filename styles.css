@@ -5,7 +5,7 @@ Uncomment the following line to give every element a red outline.
 Good for debugging.
 */
 *, *:before, *:after {
-    /* border: 1px solid red; */
+    /* border: 1px solid red !important; */
 }
 
 /* GLOBAL STYLES 
@@ -22,11 +22,6 @@ html {
 
 *, *:before, *:after {
     box-sizing: inherit;
-}
-
-/* Make sure we use the entire viewport. */
-html, body {
-    height: 100%;
 }
 
 /* Set the font-size back to 16rem (= browser pixel size) so the content is normal sized again for all screens */
@@ -90,21 +85,7 @@ header nav {
 nav ul {
     display: flex;
     justify-content: right;
-    height: 100%;
-}
-
-/*
-Space between nav links.
-First and last (left and right) items should not have the extra margin on the outside since .content-wrapper already includes padding
-*/
-nav li {
-    margin: 0 10rem;
-}
-nav li:first-child {
-    margin-left: 0;
-}
-nav li:last-child {
-    margin-right: 0;
+    gap: 20rem;
 }
 
 /* On smaller screens, put the navigation of the site below the title. */
@@ -117,11 +98,6 @@ nav li:last-child {
     header .content-wrapper{
         flex-direction: column;
         justify-content: center;
-    }
-
-    /* Navigation tag should no longer take in all available space. */
-    header nav {
-        flex: 0;
     }
 }
 
@@ -188,38 +164,68 @@ footer img {
     color: black;
 }
 
-/* SPECIFIC ELEMENTS
-------------------------------------*/
-/* #nav-summary = pretty navigation blocks in the middle of the main content of the home page. */
-#nav-summary {
+/* #block-link-list = pretty navigation blocks in the middle of the main content. */
+.block-link-list {
     display: flex;
     flex-wrap: wrap;
     gap: 20rem 10rem;
     padding-bottom: 5rem; /* To give space to the shadow */
 }
-
-/* 
-Width and height measured so 4 of these boxes fit on a full size screen. 
-These are dependent on (and should be adjusted to) the content however, not sure how I feel about that.
-*/
-#nav-summary li {
-    width: 240rem;
-    height: 240rem;
+/* These are dependent on (and should be adjusted to) the content however, not sure how I feel about that.*/
+.block-link-list li {
+    width: 100%;
     border: 1rem solid black;
     border-radius: 10rem;
     box-shadow: 5rem 5rem;
     transition: transform 0.2s;
 }
-
-#nav-summary h3 {
-    margin: 10rem;
-}
-
-#nav-summary p {
-    margin: 0 10rem;
-}
-
 /* Make the boxes pop up on hover */
-#nav-summary li:hover {
+.block-link-list li:hover {
     transform: translateY(-10rem)
+}
+/* Add some padding to the content of the block-link so it's not aligned with the border. */
+.block-link-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+    padding: 10rem;
+}
+/* Since we already dealt with the padding and flex-gap, everything within the container can have no margin. */
+.block-link-container * {
+    margin: 0;
+}
+/* Width and height measured so 4 of these boxes fit on a full size screen on the home page. */
+#home .block-link-list li{
+    width: 240rem;
+    height: 240rem;
+}
+
+/* Header class for article links within a block-link to add the publishing and last revised dates. */
+.article-link-header {
+    display: flex;
+    align-items: center;
+}
+/* The dates should be right aligned and move with the width of the block-link */
+.article-link-header aside {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 13rem;
+}
+.article-link-header aside span {
+    font-weight: bold;
+}
+
+/* On smaller screens, put the published and last revised dates title of the article. */
+@media screen and (max-width: 470px) {
+    .article-link-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5rem;
+    }
+
+    .article-link-header aside {
+        align-items: flex-start;
+    }
 }
