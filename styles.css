@@ -229,3 +229,13 @@ footer img {
         align-items: flex-start;
     }
 }
+
+/* #projects-list is for the list of projects on the Projects page */
+#projects-list li {
+    border-top: 3rem dashed;
+    padding: 10rem 0;
+}
+
+#projects-list li h3 {
+    margin: 0;
+}
