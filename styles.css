@@ -250,16 +250,19 @@ footer img {
 .project-heading .buttons {
     display: flex;
     gap: 10rem;
+    grid-column: 1;
 }
 
 .project-heading h3 {
     justify-self: center;
+    grid-column: 2;
 }
 
 .project-heading .icons {
     justify-self: end;
     display: flex;
     gap: 10rem;
+    grid-column: 3;
 }
 
 /* Size of the icons should be small */
