@@ -277,7 +277,10 @@ footer img {
 }
 
 .project-thumbnail {
-    max-width: 250rem;
+    width: 250rem;
     height: auto;
+}
+
+img.bordered {
     border: 3rem solid;
 }
