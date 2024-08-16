@@ -272,15 +272,30 @@ footer img {
     display: flex;
     gap: 10rem;
 }
+
 .project-content p {
     margin-top: 0;
 }
 
 .project-thumbnail {
-    width: 250rem;
+    max-width: 250rem;
+    max-height: 250rem;
     height: auto;
 }
 
 img.bordered {
     border: 3rem solid;
+}
+
+@media screen and (max-width: 725px) {
+    .project-content {
+        flex-direction: column;
+    }
+    .project-thumbnail {
+        order: 1;
+        align-self: center;
+    }
+    div {
+        order: 2;
+    }
 }
