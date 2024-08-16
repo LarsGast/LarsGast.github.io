@@ -261,11 +261,16 @@ footer img {
 }
 
 .project-content {
+    margin-top: 10px;
     display: flex;
     gap: 10rem;
+}
+.project-content p {
+    margin-top: 0;
 }
 
 .project-thumbnail {
     max-width: 250rem;
+    height:auto;
     border: 3rem solid;
 }
