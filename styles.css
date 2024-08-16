@@ -328,7 +328,7 @@ img.bordered {
         align-self: center;
     }
     
-    div {
+    .project-content div {
         order: 2;
     }
 }
