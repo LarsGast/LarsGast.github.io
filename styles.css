@@ -254,6 +254,7 @@ footer img {
 
 .project-heading h3 {
     grid-column: 2;
+    justify-self: center;
 }
 
 .project-heading .icons {
@@ -281,10 +282,29 @@ footer img {
     max-width: 250rem;
     max-height: 250rem;
     height: auto;
+    width: auto;
 }
 
 img.bordered {
     border: 3rem solid;
+}
+
+@media screen and (max-width: 800px) {
+    .project-heading {
+        grid-template-rows: 1fr 1fr;
+    }
+    .project-heading .buttons {
+        grid-row: 2;
+    }
+    
+    .project-heading h3 {
+        grid-column: 1 / -1;
+        grid-row: 1;
+    }
+    
+    .project-heading .icons {
+        grid-row: 2;
+    }
 }
 
 @media screen and (max-width: 725px) {
