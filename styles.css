@@ -248,3 +248,13 @@ footer img {
 .project-heading img {
     height: 26rem;
 }
+
+.project-content {
+    display: flex;
+    gap: 10rem;
+}
+
+.project-thumbnail {
+    max-width: 250rem;
+    border: 3rem solid;
+}
