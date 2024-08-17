@@ -106,6 +106,7 @@ nav ul {
 /* 50rem for the footer + 10rem breathing room */
 main {
     margin-bottom: 60rem;
+    text-align: justify;
 }
 
 /* FOOTER 
@@ -170,6 +171,7 @@ footer img {
     flex-wrap: wrap;
     gap: 20rem 10rem;
     padding-bottom: 5rem; /* To give space to the shadow */
+    text-align: left;
 }
 /* These are dependent on (and should be adjusted to) the content however, not sure how I feel about that.*/
 .block-link-list li {
