@@ -41,11 +41,11 @@
                         <li>
                             <div class="project-heading">
                                 <div class="buttons">
-                                    <a href="https://larsgast.github.io/" target="_blank">
-                                        <img src="/images/website.svg" alt="Simple website logo">
-                                    </a>
                                     <a href="https://github.com/LarsGast/LarsGast.github.io" target="_blank">
                                         <img src="/images/Github.svg" alt="GitHub logo">
+                                    </a>
+                                    <a href="https://larsgast.github.io/" target="_blank">
+                                        <img src="/images/website.svg" alt="Simple website logo">
                                     </a>
                                 </div>
                                 <h3>Just Another Title, my personal website</h3>
@@ -73,11 +73,11 @@
                         <li>
                             <div class="project-heading">
                                 <div class="buttons">
-                                    <a href="https://larsgast.github.io/DnD-Wiki" target="_blank">
-                                        <img src="/images/website.svg" alt="Simple website logo">
-                                    </a>
                                     <a href="https://github.com/LarsGast/DnD-Wiki" target="_blank">
                                         <img src="/images/Github.svg" alt="GitHub logo">
+                                    </a>
+                                    <a href="https://larsgast.github.io/DnD-Wiki" target="_blank">
+                                        <img src="/images/website.svg" alt="Simple website logo">
                                     </a>
                                 </div>
                                 <h3><abbr title="Dungeons and Dragons">DnD</abbr> Wiki</h3>
@@ -95,38 +95,15 @@
                                         I have been running multiple campaigns as a <abbr title="dungeon master">DM</abbr> for a group of friends. When I first started, I tracked everything in multiple <abbr title="Microsoft">MS</abbr> Word files, from the story to the locations to the characters. With keeping track of relationships between the various characters and locations I quickly realized that this method of storing information was unsustainable.
                                     </p>
                                     <p>
-                                        I looked around and found multiple websites online with which you can build entire worlds specifically meant for things like <abbr title="Dungeons and Dragons">DnD</abbr>. When trying these methods I found that I wanted to do things slightly different than was possible on these sites. This and the fact that I sometimes needed to buy a subscription for certain premium features brought me to make my own website.
+                                        I looked around and found multiple websites online with which you can build entire worlds specifically meant for things like <abbr title="Dungeons and Dragons">DnD</abbr>. When trying these methods I found that I wanted to do things slightly different than what was possible on these sites. This and the fact that I sometimes needed to buy a subscription for certain premium features brought me to make my own website.
                                     </p>
                                     <p>
-                                        Just like the site that you're on right now, I am hosting my wiki using GitHub Pages. So while it is incredibly useful to have a space to keep track of everything that happens during my campaigns (for both me and my players), it also helps me develop as a software engineer. As an example, the wiki is rapidly growing in terms of pages, so I had to be creative about the scalability of the site.
+                                        Just like the site that you're on right now, I am hosting my wiki using GitHub Pages. So while it is incredibly useful to have a space to keep track of everything that happens during my campaigns (for both me and my players), it also helps me develop as a software engineer. As an example, the wiki is rapidly growing in terms of pages, so I had to be creative about the scalability of the site, resulting in the use of Jekyll and Ruby functionality.
                                     </p>
                                     <p>
                                         The wiki in entirely in Dutch, because all my players and I are Dutch.
                                     </p>
                                 </div>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="project-heading">
-                                <h3>Chess app</h3>
-                                <div class="icons">
-                                    <img src="/images/CSharp.svg" alt="C# logo">
-                                </div>
-                            </div>
-                            <div class="project-content">
-                                <div>
-                                    <p>
-                                        The game of chess is complicated. After each player has made one move, there are 400 possible legal positions. One more move for each player means 197,281 possible legal positions. Chess is complicated, but it is also structured, programmable. I have been playing the game for a couple of years now and am working on my own chess application. I am not sure what I want to do with it yet, other than have fun while making it. Part of the point of this project is to have a working chess logic codebase which I could use anywhere I want in the future.
-                                    </p>
-                                    <p>
-                                        I have tried to make a working version multiple times, and I have multiple repositories saved in various places. Sometimes my motivation for a project diminishes and I stop working on it. Later, when I have learned something new that could apply, I find my motivation again and start over.
-                                    </p>
-                                    <p>
-                                        In the latest version of this project I have decided to apply test driven development, so I can learn the ins and outs of that.
-                                    </p>
-                                </div>
-                                <img class="project-thumbnail" src="/images/chess-pawn.png" alt="A chess pawn" width="1100" height="1100">
                             </div>
                         </li>
 
@@ -153,7 +130,6 @@
                                 </div>
                             </div>
                             <div class="project-content">
-                                <img class="project-thumbnail" src="/images/blackjack.png" alt="Two playing cards. A king, and an ace" width="512" height="512">
                                 <div>
                                     <p>
                                         I've never been big on trying to beat the odds, but the math always fascinated me. What if I could find a way to turn the casino's favour into my favour? This question made me work on this project.
@@ -162,10 +138,34 @@
                                         There are multiple parts to this suite, which is by design. I wanted to separate my code so individual pieces would be more easily maintained, which is the idea behind microservices.
                                     </p>
                                     <p>
-                                        I currently have a working version of a deck of cards repo, and a poker repo (which uses the deck of cards repo). I am also working on roulette and blackjack repos.
+                                        I currently have a working version of a deck of cards repo, and a poker repo (which uses the deck of cards code). I am also working on roulette and blackjack repos.
                                     </p>
                                     <p>
-                                    This project is also the first time I have uploaded my code to NuGet, which is a code packaging service for .NET projects. This forced me to do proper versioning, which made my projects more robust and maintainable. 
+                                    This project is also the first time I have uploaded my code to NuGet, which is a code packaging service for .NET projects. This forced me to do proper versioning and write proper documentation, which made my projects more robust and maintainable. 
+                                    </p>
+                                </div>
+                                <img class="project-thumbnail" src="/images/blackjack.png" alt="Two playing cards. A king, and an ace" width="512" height="512">
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="project-heading">
+                                <h3>Chess app</h3>
+                                <div class="icons">
+                                    <img src="/images/CSharp.svg" alt="C# logo">
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <img class="project-thumbnail" src="/images/chess-pawn.png" alt="A chess pawn" width="1100" height="1100">
+                                <div>
+                                    <p>
+                                        The game of chess is complicated. After each player has made one move, there are 400 possible legal positions. One more move for each player means 197,281 possible legal positions. Chess is complicated, but it is also structured, programmable. I have been playing the game for a couple of years now and am working on my own chess application. I am not sure what I want to do with it yet, other than have fun while making it. Part of the point of this project is to have a working chess logic codebase which I could use anywhere I want in the future.
+                                    </p>
+                                    <p>
+                                        I have tried to make a working version multiple times now, and I have multiple repositories saved in various places. Sometimes my motivation for a project diminishes and I stop working on it. Later, when I have learned something new that could apply, I find my motivation again and start over.
+                                    </p>
+                                    <p>
+                                        In the latest version of this project I have decided to apply test driven development, so I can learn the ins and outs of that.
                                     </p>
                                 </div>
                             </div>
@@ -190,7 +190,7 @@
                                         Bots can be used to automate sending messages, moderation, and they can even be used to play games within a chat channel.
                                     </p>
                                     <p>
-                                        This project is the first project I picked up on my own. I used Java to build the bot, had it join my own server.
+                                        This project is the first project I picked up on my own. I used Java to build the bot, and had it join my own server. It's not able to do much, but I'm proud of what I was able to come up with at the time.
                                     </p>
                                 </div>
                                 <img class="project-thumbnail" src="/images/discord.png" alt="The Discord logo" width="512" height="512">
